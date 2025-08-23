@@ -8,14 +8,12 @@
   <link rel="icon" type="image/png" href="assets/favicon.png" />
   <link rel="stylesheet" href="styles.css" />
   <style>
-    /* --- Améliorations pro --- */
     body {
       margin: 0;
       font-family: Inter, system-ui, sans-serif;
       background: #0b0720;
       color: #f6f3ff;
     }
-    /* Animation des cartes */
     .card, .card.soft {
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
@@ -23,13 +21,17 @@
       transform: translateY(-8px);
       box-shadow: 0 8px 20px rgba(0,0,0,0.4);
     }
-    /* Boutons */
     .btn {
       cursor: pointer;
       transition: transform 0.2s ease;
     }
     .btn:hover {
       transform: scale(1.05);
+    }
+    /* Adresse email sans couleur bleue */
+    .mail-link {
+      color: inherit;
+      text-decoration: underline;
     }
   </style>
 </head>
@@ -41,7 +43,6 @@
         <a href="#features">Fonctionnalités</a>
         <a href="#screens">Captures</a>
         <a href="#privacy">Sécurité & confidentialité</a>
-        <a href="#cta" class="btn small">Tester gratuitement</a>
       </nav>
       <button class="nav-toggle" aria-label="Ouvrir le menu" aria-expanded="false">☰</button>
     </div>
@@ -53,18 +54,14 @@
         <p class="kicker">Application mobile</p>
         <h1>Votre compagnon cosmique pour grandir, rayonner, transformer chaque journée.</h1>
         <p class="sub">Astrologie, numérologie, tarot + un coach IA bienveillant qui vous connaît. Guidance holistique, rituels quotidiens, confidentialité garantie.</p>
-       <div class="cta-row" id="cta">
-  <a class="btn primary" target="_blank" 
-     href="https://mail.google.com/mail/?view=cm&fs=1&to=arnaud.crestey14@gmail.com&su=Demande%20d%27accès%20gratuit%20à%20la%20bêta%20Asterolife&body=Bonjour%20Arnaud,%0D%0A%0D%0AJe%20souhaite%20tester%20gratuitement%20l'application%20Asterolife.%0D%0AMerci%20de%20m'indiquer%20la%20marche%20à%20suivre.%0D%0A%0D%0AÀ%20bientôt%20!">
-    Tester gratuitement l’appli
-  </a>
-  <a class="btn ghost" href="#features">Découvrir</a>
-</div>
-
+        <div class="cta-row" id="cta">
+          <a class="btn primary" target="_blank"
+             href="https://mail.google.com/mail/?view=cm&fs=1&to=arnaud.crestey14@gmail.com&su=Demande%20d%27accès%20gratuit%20à%20la%20bêta%20Asterolife&body=Bonjour%20Arnaud,%0D%0A%0D%0AJe%20souhaite%20tester%20gratuitement%20l'application%20Asterolife.%0D%0AMerci%20de%20m'indiquer%20la%20marche%20à%20suivre.%0D%0A%0D%0AÀ%20bientôt%20!">
+            Tester gratuitement l’appli
+          </a>
+        </div>
         <ul class="trust">
           <li>Essai gratuit 7 jours</li>
-          <li>Données chiffrées en Europe</li>
-          <li>Sans publicité</li>
         </ul>
       </div>
       <figure class="hero-art">
@@ -123,32 +120,21 @@
         <li>Vous pouvez à tout moment consulter, modifier ou supprimer vos informations.</li>
       </ul>
       <p class="muted">Une question ? Contactez-nous : 
-        <a href="mailto:arnaud.crestey14@gmail.com">arnaud.crestey14@gmail.com</a>
+        <a class="mail-link" target="_blank"
+           href="https://mail.google.com/mail/?view=cm&fs=1&to=arnaud.crestey14@gmail.com&su=Question%20sur%20Asterolife">
+          arnaud.crestey14@gmail.com
+        </a>
       </p>
     </div>
   </section>
 
   <footer class="site-footer">
     <div class="container footer-grid">
-      <div>
-        <strong>ASTEROLIFE</strong>
-        <p class="muted">Votre compagnon cosmique pour grandir, rayonner et transformer chaque journée.</p>
-      </div>
-      <nav aria-label="Liens de bas de page">
-        <a href="#hero">Haut de page</a>
-        <a href="#privacy">Politique de confidentialité</a>
-      </nav>
-      <div>
-        <a class="btn small" href="mailto:arnaud.crestey14@gmail.com?subject=Demande%20d%27accès%20gratuit%20à%20la%20bêta%20Asterolife&body=Bonjour%20Arnaud%2C%0D%0A%0D%0AJe%20souhaite%20tester%20gratuitement%20l'application%20Asterolife.%0D%0AMerci%20de%20m'indiquer%20la%20marche%20%C3%A0%20suivre.%0D%0A%0D%0A%C3%80%20bient%C3%B4t%20!">
-          Tester gratuitement
-        </a>
-      </div>
+      <p class="legal">© <span id="year"></span> Asterolife — Tous droits réservés.</p>
     </div>
-    <p class="legal">© <span id="year"></span> Asterolife — Tous droits réservés.</p>
   </footer>
 
   <script>
-    // Met l'année automatiquement
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 </body>
