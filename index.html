@@ -3,124 +3,120 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Asterolife — Votre compagnon cosmique</title>
+  <title>Asterolife — Application de guidance personnalisée (astrologie, numérologie, tarot)</title>
+  <meta name="description" content="Asterolife est votre compagnon cosmique : astrologie, numérologie et tarot réunis, avec un coach IA bienveillant qui personnalise chaque journée." />
+  <link rel="icon" type="image/png" href="assets/favicon.png" />
+  <link rel="stylesheet" href="styles.css" />
   <style>
-    body {
-      margin: 0;
-      font-family: 'Inter', sans-serif;
-      background: radial-gradient(circle at 50% 20%, #1a103d, #0b0720);
-      color: #f6f3ff;
-      overflow-x: hidden;
+    body { margin:0; font-family:Inter,system-ui,sans-serif; background:#0b0720; color:#f6f3ff; }
+    .brand {
+      font-size: 1.6rem;
+      font-weight: 800;
+      letter-spacing: 1px;
+      color: #7D5FFF;
+      text-shadow: 0 0 12px rgba(125,95,255,0.6), 0 0 24px rgba(125,95,255,0.4);
+      transition: transform 0.2s ease, text-shadow 0.3s ease;
     }
-    /* Fond étoiles animées */
-    .stars {
-      position: fixed;
-      width: 100%;
-      height: 100%;
-      top: 0; left: 0;
-      background: transparent;
-      overflow: hidden;
-      z-index: -1;
+    .brand:hover {
+      transform: scale(1.08);
+      text-shadow: 0 0 16px rgba(125,95,255,0.9), 0 0 32px rgba(125,95,255,0.6);
     }
-    .star {
-      position: absolute;
-      width: 2px;
-      height: 2px;
-      background: white;
-      border-radius: 50%;
-      opacity: 0.7;
-      animation: twinkle 3s infinite alternate;
-    }
-    @keyframes twinkle {
-      from { opacity: 0.3; transform: scale(0.8); }
-      to   { opacity: 1; transform: scale(1.2); }
-    }
-
-    /* Cartes */
-    .card {
-      background: rgba(255, 255, 255, 0.05);
-      border-radius: 20px;
-      padding: 20px;
-      margin: 20px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.4);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-    .card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 12px 28px rgba(0,0,0,0.6);
-    }
-
-    /* Boutons */
-    .btn {
-      display: inline-block;
-      padding: 12px 22px;
-      border-radius: 30px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: transform 0.2s ease;
-    }
-    .btn.primary {
-      background: #7D5FFF;
-      color: white;
-    }
-    .btn.primary:hover {
-      transform: scale(1.05);
-      box-shadow: 0 0 15px #7D5FFF;
-    }
-
-    header {
-      text-align: center;
-      padding: 30px;
-    }
-    h1, h2 {
-      color: #fff;
-    }
+    .card { transition:transform .3s, box-shadow .3s; }
+    .card:hover { transform:translateY(-8px); box-shadow:0 8px 20px rgba(0,0,0,0.4); }
   </style>
 </head>
 <body>
-  <!-- Fond étoiles -->
-  <div class="stars"></div>
-
-  <header>
-    <h1>✨ Bienvenue sur Asterolife ✨</h1>
-    <p>Votre compagnon cosmique : astrologie, numérologie, tarot & guidance personnalisée.</p>
-    <a href="#cta" class="btn primary">Rejoindre la bêta</a>
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="#hero">ASTEROLIFE</a>
+      <nav class="nav">
+        <a href="#features">Fonctionnalités</a>
+        <a href="#screens">Captures</a>
+        <a href="#privacy">Sécurité & confidentialité</a>
+        <a href="#cta" class="btn small">Rejoindre la bêta</a>
+      </nav>
+    </div>
   </header>
 
-  <section>
-    <h2>Pourquoi choisir Asterolife ?</h2>
-    <div style="display:flex; flex-wrap:wrap; justify-content:center;">
-      <div class="card" style="max-width:250px;">
-        <h3>🔮 Guidance holistique</h3>
-        <p>Astro, tarot et numérologie réunis pour vous guider chaque jour.</p>
+  <main id="hero" class="hero">
+    <div class="container hero-wrap">
+      <div class="hero-text">
+        <p class="kicker">Application mobile</p>
+        <h1>Votre compagnon cosmique pour grandir, rayonner, transformer chaque journée.</h1>
+        <p class="sub">Astrologie, numérologie, tarot + un coach IA bienveillant qui vous connaît.</p>
+        <div class="cta-row" id="cta">
+          <a class="btn primary" href="mailto:contact@exemple.com?subject=Rejoindre%20la%20b%C3%AAta%20Asterolife">Rejoindre la bêta privée</a>
+          <a class="btn ghost" href="#features">Découvrir</a>
+        </div>
       </div>
-      <div class="card" style="max-width:250px;">
-        <h3>🤝 Coach à l’écoute</h3>
-        <p>Un accompagnement progressif et bienveillant qui vous ressemble.</p>
-      </div>
-      <div class="card" style="max-width:250px;">
-        <h3>🌌 Design immersif</h3>
-        <p>Un univers violet cosmique avec des étoiles scintillantes.</p>
+      <figure class="hero-art">
+        <img src="assets/medley-asterolife.png" alt="Montage d’écrans Asterolife"/>
+      </figure>
+    </div>
+  </main>
+
+  <section id="features" class="section">
+    <div class="container">
+      <h2>Pourquoi Asterolife ?</h2>
+      <div class="grid features-grid">
+        <article class="card"><div class="icon">✨</div><h3>Guidance holistique</h3><p>Astro, numérologie et tarot réunis pour une vision complète.</p></article>
+        <article class="card"><div class="icon">🤝</div><h3>Coach digital à l’écoute</h3><p>Astéro mémorise vos préférences et objectifs.</p></article>
+        <article class="card"><div class="icon">🎯</div><h3>Personnalisation absolue</h3><p>Un contenu aligné à votre profil et vos besoins.</p></article>
+        <article class="card"><div class="icon">🧭</div><h3>Rituels quotidiens</h3><p>Méditations, inspirations, journaling…</p></article>
+        <article class="card"><div class="icon">🌌</div><h3>Design immersif</h3><p>Univers cosmique pastel et animations discrètes.</p></article>
+        <article class="card"><div class="icon">🔐</div><h3>Confidentialité garantie</h3><p>Données sécurisées, hébergées en Europe.</p></article>
       </div>
     </div>
   </section>
 
-  <footer style="text-align:center; padding:40px; font-size:14px; opacity:0.7;">
-    © <span id="year"></span> Asterolife — Tous droits réservés.
+  <section id="daily" class="section alt">
+    <div class="container">
+      <h2>Votre quotidien</h2>
+      <div class="grid daily-grid">
+        <article class="card soft"><h3>Tableau de bord</h3><p>Vibration numérologique, carte du jour, défi bien-être.</p></article>
+        <article class="card soft"><h3>Horoscope perso</h3><p>Énergies du jour pour des choix alignés.</p></article>
+        <article class="card soft"><h3>Tirages interactifs</h3><p>Carte du jour, tirage en croix, guidance relationnelle.</p></article>
+        <article class="card soft"><h3>Coach empathique</h3><p>Guidance personnalisée, exercices simples et soutien constant grâce à Astéro.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="screens" class="section">
+    <div class="container">
+      <h2>Captures d’écran</h2>
+      <div class="screens-grid">
+        <figure><img src="assets/homepage.png" alt="Accueil"/></figure>
+        <figure><img src="assets/pageastro.png" alt="Astro"/></figure>
+        <figure><img src="assets/pagetarot.png" alt="Tarot"/></figure>
+        <figure><img src="assets/numeropage.png" alt="Numérologie"/></figure>
+        <figure><img src="assets/pageacces.png" alt="Accès"/></figure>
+      </div>
+    </div>
+  </section>
+
+  <section id="privacy" class="section alt">
+    <div class="container">
+      <h2>Sécurité & confidentialité</h2>
+      <ul class="check">
+        <li>Vos données sont protégées et gardées en lieu sûr.</li>
+        <li>Stockage en Europe avec sauvegardes régulières.</li>
+        <li>Un contrôle simple de vos préférences (cookies, suivi).</li>
+        <li>Vous pouvez à tout moment consulter, modifier ou supprimer vos infos.</li>
+      </ul>
+      <p class="muted">Une question ? Contactez-nous : <a href="mailto:contact@exemple.com">contact@exemple.com</a></p>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div><strong>ASTEROLIFE</strong><p class="muted">Votre compagnon cosmique pour grandir, rayonner, transformer chaque journée.</p></div>
+      <nav><a href="#hero">Haut de page</a> <a href="#privacy">Politique de confidentialité</a></nav>
+      <div><a class="btn small" href="mailto:contact@exemple.com?subject=Rejoindre%20la%20b%C3%AAta">Rejoindre la bêta</a></div>
+    </div>
+    <p class="legal">© <span id="year"></span> Asterolife — Tous droits réservés.</p>
   </footer>
 
   <script>
-    // Ajout dynamique d'étoiles
-    const starsContainer = document.querySelector('.stars');
-    for (let i = 0; i < 80; i++) {
-      const star = document.createElement('div');
-      star.className = 'star';
-      star.style.top = Math.random() * 100 + '%';
-      star.style.left = Math.random() * 100 + '%';
-      star.style.animationDuration = (2 + Math.random()*3) + 's';
-      starsContainer.appendChild(star);
-    }
-    // année auto
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 </body>
