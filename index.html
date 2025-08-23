@@ -8,33 +8,42 @@
   <link rel="icon" type="image/png" href="assets/favicon.png" />
   <link rel="stylesheet" href="styles.css" />
   <style>
-    body { margin:0; font-family:Inter,system-ui,sans-serif; background:#0b0720; color:#f6f3ff; }
-    .brand {
-      font-size: 1.6rem;
-      font-weight: 800;
-      letter-spacing: 1px;
-      color: #7D5FFF;
-      text-shadow: 0 0 12px rgba(125,95,255,0.6), 0 0 24px rgba(125,95,255,0.4);
-      transition: transform 0.2s ease, text-shadow 0.3s ease;
+    /* --- Améliorations pro --- */
+    body {
+      margin: 0;
+      font-family: Inter, system-ui, sans-serif;
+      background: #0b0720;
+      color: #f6f3ff;
     }
-    .brand:hover {
-      transform: scale(1.08);
-      text-shadow: 0 0 16px rgba(125,95,255,0.9), 0 0 32px rgba(125,95,255,0.6);
+    /* Animation des cartes */
+    .card, .card.soft {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
-    .card { transition:transform .3s, box-shadow .3s; }
-    .card:hover { transform:translateY(-8px); box-shadow:0 8px 20px rgba(0,0,0,0.4); }
+    .card:hover, .card.soft:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+    }
+    /* Boutons */
+    .btn {
+      cursor: pointer;
+      transition: transform 0.2s ease;
+    }
+    .btn:hover {
+      transform: scale(1.05);
+    }
   </style>
 </head>
 <body>
-  <header class="site-header">
+  <header class="site-header" data-sticky>
     <div class="container">
-      <a class="brand" href="#hero">ASTEROLIFE</a>
-      <nav class="nav">
+      <a class="brand" href="#hero" aria-label="Retour au début">ASTEROLIFE</a>
+      <nav class="nav" aria-label="Navigation principale">
         <a href="#features">Fonctionnalités</a>
         <a href="#screens">Captures</a>
         <a href="#privacy">Sécurité & confidentialité</a>
         <a href="#cta" class="btn small">Rejoindre la bêta</a>
       </nav>
+      <button class="nav-toggle" aria-label="Ouvrir le menu" aria-expanded="false">☰</button>
     </div>
   </header>
 
@@ -43,39 +52,45 @@
       <div class="hero-text">
         <p class="kicker">Application mobile</p>
         <h1>Votre compagnon cosmique pour grandir, rayonner, transformer chaque journée.</h1>
-        <p class="sub">Astrologie, numérologie, tarot + un coach IA bienveillant qui vous connaît.</p>
+        <p class="sub">Astrologie, numérologie, tarot + un coach IA bienveillant qui vous connaît. Guidance holistique, rituels quotidiens, confidentialité garantie.</p>
         <div class="cta-row" id="cta">
           <a class="btn primary" href="mailto:contact@exemple.com?subject=Rejoindre%20la%20b%C3%AAta%20Asterolife">Rejoindre la bêta privée</a>
           <a class="btn ghost" href="#features">Découvrir</a>
         </div>
+        <ul class="trust">
+          <li>Essai gratuit 7 jours</li>
+          <li>Données chiffrées en Europe</li>
+          <li>Sans publicité</li>
+        </ul>
       </div>
       <figure class="hero-art">
-        <img src="assets/medley-asterolife.png" alt="Montage d’écrans Asterolife"/>
+        <img src="assets/medley-asterolife.png" alt="Montage d’écrans Asterolife" loading="eager" />
       </figure>
     </div>
+    <div class="glow"></div>
   </main>
 
   <section id="features" class="section">
     <div class="container">
       <h2>Pourquoi Asterolife ?</h2>
       <div class="grid features-grid">
-        <article class="card"><div class="icon">✨</div><h3>Guidance holistique</h3><p>Astro, numérologie et tarot réunis pour une vision complète.</p></article>
-        <article class="card"><div class="icon">🤝</div><h3>Coach digital à l’écoute</h3><p>Astéro mémorise vos préférences et objectifs.</p></article>
-        <article class="card"><div class="icon">🎯</div><h3>Personnalisation absolue</h3><p>Un contenu aligné à votre profil et vos besoins.</p></article>
-        <article class="card"><div class="icon">🧭</div><h3>Rituels quotidiens</h3><p>Méditations, inspirations, journaling…</p></article>
-        <article class="card"><div class="icon">🌌</div><h3>Design immersif</h3><p>Univers cosmique pastel et animations discrètes.</p></article>
-        <article class="card"><div class="icon">🔐</div><h3>Confidentialité garantie</h3><p>Données sécurisées, hébergées en Europe.</p></article>
+        <article class="card"><div class="icon">✨</div><h3>Guidance holistique</h3><p>Horoscope, numérologie et tarot s’assemblent pour une vision complète de vos influences du moment.</p></article>
+        <article class="card"><div class="icon">🤝</div><h3>Coach digital à l’écoute</h3><p>Astéro mémorise vos préférences et objectifs. Chaque message est une conversation authentique, pas à pas.</p></article>
+        <article class="card"><div class="icon">🎯</div><h3>Personnalisation absolue</h3><p>Thème astral, chemin de vie et tirages analysés pour des conseils uniques et évolutifs.</p></article>
+        <article class="card"><div class="icon">🧭</div><h3>Rituels quotidiens</h3><p>Défis bien-être, inspirations, méditations et journaling pour rester centré et motivé.</p></article>
+        <article class="card"><div class="icon">🌌</div><h3>Design immersif</h3><p>Univers cosmique chaleureux, couleurs pastel et animations discrètes pour une expérience apaisante.</p></article>
+        <article class="card"><div class="icon">🔐</div><h3>Confidentialité garantie</h3><p>Données chiffrées, hébergées en Europe. Vous maîtrisez vos informations à tout moment.</p></article>
       </div>
     </div>
   </section>
 
   <section id="daily" class="section alt">
     <div class="container">
-      <h2>Votre quotidien</h2>
+      <h2>Ce que vous vivrez au quotidien</h2>
       <div class="grid daily-grid">
-        <article class="card soft"><h3>Tableau de bord</h3><p>Vibration numérologique, carte du jour, défi bien-être.</p></article>
-        <article class="card soft"><h3>Horoscope perso</h3><p>Énergies du jour pour des choix alignés.</p></article>
-        <article class="card soft"><h3>Tirages interactifs</h3><p>Carte du jour, tirage en croix, guidance relationnelle.</p></article>
+        <article class="card soft"><h3>Tableau de bord personnalisé</h3><p>Vibration numérologique, carte du jour et défi bien-être alignés à votre humeur.</p></article>
+        <article class="card soft"><h3>Horoscope personnalisé</h3><p>Mettez en lumière les énergies du jour et prenez des décisions alignées.</p></article>
+        <article class="card soft"><h3>Tirages interactifs</h3><p>Carte du jour, tirage en croix, relationnel… Questionnez votre intuition et ouvrez des perspectives.</p></article>
         <article class="card soft"><h3>Coach empathique</h3><p>Guidance personnalisée, exercices simples et soutien constant grâce à Astéro.</p></article>
       </div>
     </div>
@@ -85,11 +100,11 @@
     <div class="container">
       <h2>Captures d’écran</h2>
       <div class="screens-grid">
-        <figure><img src="assets/homepage.png" alt="Accueil"/></figure>
-        <figure><img src="assets/pageastro.png" alt="Astro"/></figure>
-        <figure><img src="assets/pagetarot.png" alt="Tarot"/></figure>
-        <figure><img src="assets/numeropage.png" alt="Numérologie"/></figure>
-        <figure><img src="assets/pageacces.png" alt="Accès"/></figure>
+        <figure><img src="assets/homepage.png" alt="Accueil Asterolife" loading="lazy"/><figcaption>Accueil</figcaption></figure>
+        <figure><img src="assets/pageastro.png" alt="Section astro" loading="lazy"/><figcaption>Astro</figcaption></figure>
+        <figure><img src="assets/pagetarot.png" alt="Tirage tarot" loading="lazy"/><figcaption>Tarot</figcaption></figure>
+        <figure><img src="assets/numeropage.png" alt="Numérologie" loading="lazy"/><figcaption>Numérologie</figcaption></figure>
+        <figure><img src="assets/pageacces.png" alt="Écran d’accès" loading="lazy"/><figcaption>Accès</figcaption></figure>
       </div>
     </div>
   </section>
@@ -99,24 +114,35 @@
       <h2>Sécurité & confidentialité</h2>
       <ul class="check">
         <li>Vos données sont protégées et gardées en lieu sûr.</li>
-        <li>Stockage en Europe avec sauvegardes régulières.</li>
+        <li>Stockage en Europe, avec sauvegardes régulières.</li>
         <li>Un contrôle simple de vos préférences (cookies, suivi).</li>
-        <li>Vous pouvez à tout moment consulter, modifier ou supprimer vos infos.</li>
+        <li>Vous pouvez à tout moment consulter, modifier ou supprimer vos informations.</li>
       </ul>
-      <p class="muted">Une question ? Contactez-nous : <a href="mailto:contact@exemple.com">contact@exemple.com</a></p>
+      <p class="muted">Une question ? Contactez-nous : 
+        <a href="mailto:contact@exemple.com">contact@exemple.com</a>
+      </p>
     </div>
   </section>
 
   <footer class="site-footer">
     <div class="container footer-grid">
-      <div><strong>ASTEROLIFE</strong><p class="muted">Votre compagnon cosmique pour grandir, rayonner, transformer chaque journée.</p></div>
-      <nav><a href="#hero">Haut de page</a> <a href="#privacy">Politique de confidentialité</a></nav>
-      <div><a class="btn small" href="mailto:contact@exemple.com?subject=Rejoindre%20la%20b%C3%AAta">Rejoindre la bêta</a></div>
+      <div>
+        <strong>ASTEROLIFE</strong>
+        <p class="muted">Votre compagnon cosmique pour grandir, rayonner et transformer chaque journée.</p>
+      </div>
+      <nav aria-label="Liens de bas de page">
+        <a href="#hero">Haut de page</a>
+        <a href="#privacy">Politique de confidentialité</a>
+      </nav>
+      <div>
+        <a class="btn small" href="mailto:contact@exemple.com?subject=Rejoindre%20la%20b%C3%AAta%20Asterolife">Rejoindre la bêta</a>
+      </div>
     </div>
     <p class="legal">© <span id="year"></span> Asterolife — Tous droits réservés.</p>
   </footer>
 
   <script>
+    // Met l'année automatiquement
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 </body>
