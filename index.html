@@ -6,17 +6,32 @@
   <title>Asterolife — Application de guidance personnalisée (astrologie, numérologie, tarot)</title>
   <meta name="description" content="Asterolife est votre compagnon cosmique : astrologie, numérologie et tarot réunis, avec un coach IA bienveillant qui personnalise chaque journée." />
   <link rel="icon" type="image/png" href="assets/favicon.png" />
-  <link rel="canonical" href="https://www.example.com/" />
-  <meta property="og:title" content="Asterolife — votre compagnon cosmique" />
-  <meta property="og:description" content="Horoscope, numérologie, tarot & un coach IA qui vous connaît. Transformez chaque journée avec Asterolife." />
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="assets/medley-asterolife.png" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Asterolife — votre compagnon cosmique" />
-  <meta name="twitter:description" content="Guidance holistique, rituels quotidiens & confidentialité garantie." />
-  <meta name="twitter:image" content="assets/medley-asterolife.png" />
-  <link rel="preload" href="assets/medley-asterolife.png" as="image" />
   <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* --- Améliorations pro --- */
+    body {
+      margin: 0;
+      font-family: Inter, system-ui, sans-serif;
+      background: #0b0720;
+      color: #f6f3ff;
+    }
+    /* Animation des cartes */
+    .card, .card.soft {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .card:hover, .card.soft:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+    }
+    /* Boutons */
+    .btn {
+      cursor: pointer;
+      transition: transform 0.2s ease;
+    }
+    .btn:hover {
+      transform: scale(1.05);
+    }
+  </style>
 </head>
 <body>
   <header class="site-header" data-sticky>
@@ -25,7 +40,7 @@
       <nav class="nav" aria-label="Navigation principale">
         <a href="#features">Fonctionnalités</a>
         <a href="#screens">Captures</a>
-        <a href="#privacy">Sécurité & RGPD</a>
+        <a href="#privacy">Sécurité & confidentialité</a>
         <a href="#cta" class="btn small">Rejoindre la bêta</a>
       </nav>
       <button class="nav-toggle" aria-label="Ouvrir le menu" aria-expanded="false">☰</button>
@@ -76,7 +91,7 @@
         <article class="card soft"><h3>Tableau de bord personnalisé</h3><p>Vibration numérologique, carte du jour et défi bien-être alignés à votre humeur.</p></article>
         <article class="card soft"><h3>Horoscope personnalisé</h3><p>Mettez en lumière les énergies du jour et prenez des décisions alignées.</p></article>
         <article class="card soft"><h3>Tirages interactifs</h3><p>Carte du jour, tirage en croix, relationnel… Questionnez votre intuition et ouvrez des perspectives.</p></article>
-        <article class="card soft"><h3>Coach empathique</h3><p>Exercices de respiration, visualisations, podcasts sur-mesure et réponses inspirantes avec Astéro.</p></article>
+        <article class="card soft"><h3>Coach empathique</h3><p>Guidance personnalisée, exercices simples et soutien constant grâce à Astéro.</p></article>
       </div>
     </div>
   </section>
@@ -96,14 +111,16 @@
 
   <section id="privacy" class="section alt">
     <div class="container">
-      <h2>Sécurité & RGPD</h2>
+      <h2>Sécurité & confidentialité</h2>
       <ul class="check">
-        <li>Données chiffrées en transit et au repos.</li>
-        <li>Hébergement en Europe, sauvegardes régulières.</li>
-        <li>Paramétrage fin des cookies et du suivi.</li>
-        <li>Droit d’accès, de rectification et d’effacement respecté.</li>
+        <li>Vos données sont protégées et gardées en lieu sûr.</li>
+        <li>Stockage en Europe, avec sauvegardes régulières.</li>
+        <li>Un contrôle simple de vos préférences (cookies, suivi).</li>
+        <li>Vous pouvez à tout moment consulter, modifier ou supprimer vos informations.</li>
       </ul>
-      <p class="muted">Besoin d’aide ou d’exercer vos droits ? Écrivez-nous : <a href="mailto:contact@exemple.com">contact@exemple.com</a></p>
+      <p class="muted">Une question ? Contactez-nous : 
+        <a href="mailto:contact@exemple.com">contact@exemple.com</a>
+      </p>
     </div>
   </section>
 
@@ -123,6 +140,10 @@
     </div>
     <p class="legal">© <span id="year"></span> Asterolife — Tous droits réservés.</p>
   </footer>
+
+  <script>
+    // Met l'année automatiquement
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
-
