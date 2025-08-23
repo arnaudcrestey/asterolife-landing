@@ -7,69 +7,24 @@
   <meta name="description" content="Asterolife est votre compagnon cosmique : astrologie, numérologie et tarot réunis, avec un coach IA bienveillant qui personnalise chaque journée." />
   <link rel="icon" type="image/png" href="assets/favicon.png" />
   <link rel="stylesheet" href="styles.css" />
-  <style>
-    body {
-      margin: 0;
-      font-family: Inter, system-ui, sans-serif;
-      background: #0b0720;
-      color: #f6f3ff;
-    }
-    .card, .card.soft {
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-    .card:hover, .card.soft:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 8px 20px rgba(0,0,0,0.4);
-    }
-    .btn {
-      cursor: pointer;
-      transition: transform 0.2s ease;
-    }
-    .btn:hover {
-      transform: scale(1.05);
-    }
-    /* Adresse email sans couleur bleue */
-    .mail-link {
-      color: inherit;
-      text-decoration: underline;
-    }
-    /* --- LOGO PRO ASTEROLIFE --- */
-    .logo {
-      font-size: 1.6rem;
-      font-weight: 900;
-      letter-spacing: 2px;
-      background: linear-gradient(90deg, #a78bfa, #ec4899, #60a5fa);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      text-transform: uppercase;
-      text-shadow: 0 0 12px rgba(167, 139, 250, 0.7),
-                   0 0 28px rgba(236, 72, 153, 0.5),
-                   0 0 40px rgba(96, 165, 250, 0.4);
-      transition: transform 0.3s ease, text-shadow 0.3s ease;
-    }
-    .logo:hover {
-      transform: scale(1.05);
-      text-shadow: 0 0 16px rgba(167, 139, 250, 0.9),
-                   0 0 36px rgba(236, 72, 153, 0.7),
-                   0 0 50px rgba(96, 165, 250, 0.6);
-    }
-  </style>
 </head>
 <body>
-  <header class="site-header" data-sticky>
+  <!-- HEADER -->
+  <header class="site-header">
     <div class="container">
       <a class="brand" href="#hero" aria-label="Retour au début">
         <span class="logo">ASTEROLIFE</span>
       </a>
       <nav class="nav" aria-label="Navigation principale">
         <a href="#features">Fonctionnalités</a>
-        <a href="#screens">-</a>
+        <a href="#screens">Captures</a>
         <a href="#privacy">Sécurité & confidentialité</a>
       </nav>
       <button class="nav-toggle" aria-label="Ouvrir le menu" aria-expanded="false">☰</button>
     </div>
   </header>
 
+  <!-- HERO -->
   <main id="hero" class="hero">
     <div class="container hero-wrap">
       <div class="hero-text">
@@ -78,7 +33,7 @@
         <p class="sub">Astrologie, numérologie, tarot + un coach IA bienveillant qui vous connaît. Guidance holistique, rituels quotidiens, confidentialité garantie.</p>
         <div class="cta-row" id="cta">
           <a class="btn primary" target="_blank"
-             href="https://mail.google.com/mail/?view=cm&fs=1&to=arnaud.crestey14@gmail.com&su=Demande%20d%27accès%20gratuit%20à%20la%20bêta%20Asterolife&body=Bonjour%20Arnaud,%0D%0A%0D%0AJe%20souhaite%20tester%20gratuitement%20l'application%20Asterolife.%0D%0AMerci%20de%20m'indiquer%20la%20marche%20à%20suivre.%0D%0A%0D%0AÀ%20bientôt%20!">
+             href="https://mail.google.com/mail/?view=cm&fs=1&to=arnaud.crestey14@gmail.com&su=Demande%20d%27acc%C3%A8s%20gratuit%20%C3%A0%20la%20b%C3%AAta%20Asterolife&body=Bonjour%20Arnaud,%0D%0A%0D%0AJe%20souhaite%20tester%20gratuitement%20l'application%20Asterolife.%0D%0AMerci%20de%20m'indiquer%20la%20marche%20%C3%A0%20suivre.%0D%0A%0D%0A%C3%80%20bient%C3%B4t%20!">
             Tester gratuitement l’appli
           </a>
         </div>
@@ -93,6 +48,7 @@
     <div class="glow"></div>
   </main>
 
+  <!-- FEATURES -->
   <section id="features" class="section">
     <div class="container">
       <h2>Pourquoi Asterolife ?</h2>
@@ -107,6 +63,7 @@
     </div>
   </section>
 
+  <!-- DAILY -->
   <section id="daily" class="section alt">
     <div class="container">
       <h2>Ce que vous vivrez au quotidien</h2>
@@ -119,6 +76,7 @@
     </div>
   </section>
 
+  <!-- SCREENS -->
   <section id="screens" class="section">
     <div class="container">
       <h2>Captures d’écran</h2>
@@ -132,33 +90,39 @@
     </div>
   </section>
 
-<section id="privacy" class="section alt">
-  <div class="container">
-    <h2>Sécurité & confidentialité</h2>
-    <ul class="check">
-      <li>Vos données sont protégées et gardées en lieu sûr.</li>
-      <li>Stockage en Europe, avec sauvegardes régulières.</li>
-      <li>Un contrôle simple de vos préférences (cookies, suivi).</li>
-      <li>Vous pouvez à tout moment consulter, modifier ou supprimer vos informations.</li>
-    </ul>
-    <p class="muted" style="text-align: center; margin: 50px 0 30px;">
-      Une question ? Contactez-nous : 
-      <a class="mail-link" target="_blank"
-         href="https://mail.google.com/mail/?view=cm&fs=1&to=arnaud.crestey14@gmail.com&su=Question%20sur%20Asterolife">
-        arnaud.crestey14@gmail.com
-      </a>
-    </p>
-  </div>
-</section>
+  <!-- PRIVACY -->
+  <section id="privacy" class="section alt">
+    <div class="container">
+      <h2>Sécurité & confidentialité</h2>
+      <ul class="check">
+        <li>Vos données sont protégées et gardées en lieu sûr.</li>
+        <li>Stockage en Europe, avec sauvegardes régulières.</li>
+        <li>Un contrôle simple de vos préférences (cookies, suivi).</li>
+        <li>Vous pouvez à tout moment consulter, modifier ou supprimer vos informations.</li>
+      </ul>
+      <p class="muted" style="text-align: center; margin: 50px 0 30px;">
+        Une question ? Contactez-moi : 
+        <a class="mail-link" target="_blank"
+           href="https://mail.google.com/mail/?view=cm&fs=1&to=arnaud.crestey14@gmail.com&su=Question%20sur%20Asterolife">
+          arnaud.crestey14@gmail.com
+        </a>
+      </p>
+    </div>
+  </section>
 
-<footer class="site-footer" style="text-align: center; padding: 10px 0;">
-  <p class="legal">© <span id="year"></span> Asterolife — Tous droits réservés.</p>
-</footer>
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <p class="legal">© <span id="year"></span> Asterolife — Tous droits réservés.</p>
+  </footer>
 
-
-
+  <!-- SCRIPTS -->
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
+    const toggle = document.querySelector('.nav-toggle');
+    const nav = document.querySelector('.nav');
+    toggle.addEventListener('click', () => {
+      nav.classList.toggle('open');
+    });
   </script>
 </body>
 </html>
